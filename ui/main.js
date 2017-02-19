@@ -1,5 +1,5 @@
 var counter = 0;
-var span = document.getElementById('')
+var span = document.getElementById('');
 var request = new XMLHttpRequest();
 
 request.onreadystatechange = function()
