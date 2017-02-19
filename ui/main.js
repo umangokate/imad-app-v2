@@ -1,15 +1,14 @@
-console.log('Loaded!');
-var text = document.getElementById('main-text');
-text.innerHTML = 'Yala Yolo';
+var counter = 0;
+var span = document.getElementById('')
+var request = new XMLHttpRequest();
 
-var img = document.getElementById('madi');
-
-var marginleft = 0;
-function marginRight(){
-    marginleft = marginleft + 5;
-    img.style.marginLeft = marginleft+'px';
-}
-
-img.onclick =  function() {
-    var interval = setInterval(marginRight,100);
+request.onreadystatechange = function()
+{
+    if (request.readyState === XMLHttpRequest.DONE)
+    {
+        if(request.status === 200)
+        {
+            var counter = counter+1;
+        }
+    }
 };
