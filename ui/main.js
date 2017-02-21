@@ -1,18 +1,19 @@
 var button = document.getElementById('counter');
-var counter = document.getElementById('count');
+
 
 
 button.onclick =  function(){
     
     var request = new XMLHttpRequest();
     
-    request.readyonstatechange = function()
+    request.onreadystatechange = function()
     {
       if(request.readyState == XMLHttpRequest.DONE)
       {
           if(request.status == 200)
           {
               var cnt = request.responseText;
+              var counter = document.getElementById('count');
               counter.innerHTML = cnt.toString();
               
           }
