@@ -19,6 +19,25 @@ button.onclick =  function(){
           }
       }
     };
-request.open('GET', 'http://umangokate.imad.hasura-app.io/counter', true);
+request.open('GET', 'http://localhost:8080/counter', true);
 request.send(null);
+};
+
+var names = ['name1','name2','name3','name4'];
+
+var subm = document.getElementById('submit_btn');
+
+var text = document.getElementById('txt');
+
+var li = document.getElementById('namelist')
+
+var list = ' ';
+subm.onclick = function(){
+
+    for(var i = 0;i<names.length;i++)
+    {
+        list += '<li>'+names[i]+'</li>';
+    }
+    li.innerHTML = list;
+
 };
