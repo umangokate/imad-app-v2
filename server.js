@@ -4,6 +4,12 @@ var path = require('path');
 
 var Pool = require('pg').Pool;
 
+var config = {
+    host: 'http://db.imad.hasura-app.io',
+  user: 'umangokate',
+  password: 'db-umangokate-67657',
+  database: 'umangokate',
+};
 var app = express();
 app.use(morgan('combined'));
 
@@ -86,7 +92,7 @@ var pool = new Pool(config);
 
 /*app.get('/test-db',function(req,res){
    
-   pool.query('SELECT * FROM test-db',function(err,result){
+   pool.query('SELECT * FROM test',function(err,result){
       if(err)
       {
           res.status(500).send(err.toString());
