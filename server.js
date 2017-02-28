@@ -82,7 +82,7 @@ return htmlTemp;
 }
 
 
-//var pool = new Pool(config);
+var pool = new Pool(config);
 
 /*app.get('/test-db',function(req,res){
    
