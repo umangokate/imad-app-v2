@@ -18,41 +18,6 @@ var config = {
 var app = express();
 app.use(morgan('combined'));
 
-var articles = 
-{
-    'article-one' : {title:'Articles',
-    heading:'Article One',
-    date:'19 Feb 2017',
-    content:`<p>
-                This is an article.This is an article.This is an article.This is an article.This is an article.This is an article.This is an article.This is an article.This is an article.This is an article.This is an article.This is an article.This is an article.This is an article.This is an article.This is an article.This is an article.This is an article.This is an article.This is an article.This is an article.
-            </p>
-            <p>
-                This is an article.This is an article.This is an article.This is an article.This is an article.This is an article.This is an article.This is an article.This is an article.This is an article.This is an article.This is an article.This is an article.This is an article.This is an article.This is an article.This is an article.This is an article.This is an article.This is an article.This is an article.
-            </p>
-            <p>
-                This is an article.This is an article.This is an article.This is an article.This is an article.This is an article.This is an article.This is an article.This is an article.This is an article.This is an article.This is an article.This is an article.This is an article.This is an article.This is an article.This is an article.This is an article.This is an article.This is an article.This is an article.
-            </p>`
-    },
-    'article-two':{
-    title:'Articles',
-    heading:'Article Two',
-    date:'19 Feb 2017',
-    content:`<p>
-                This is an article.This is an article.This is an article.This is an article.This is an article.This is an article.This is an article.This is an article.This is an article.This is an article.This is an article.This is an article.This is an article.This is an article.This is an article.This is an article.This is an article.This is an article.This is an article.This is an article.This is an article.
-            </p>
-        `},
-    'article-three':{
-        title:'Articles',
-    heading:'Article Thre',
-    date:'19 Feb 2017',
-    content:`<p>
-                It is ON!
-            </p>`
-                
-        
-    }
-            
-};
 
 function createTemplate(data)
 {   
