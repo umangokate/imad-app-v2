@@ -132,7 +132,7 @@ app.get('/submit-name', function(req,res){
 app.get('/articles/:articleName',function(req,res){
     //var articleNa = req.params.articleName;
     
-    pool.query('SELECT * FROM articles where title = '+req.params.articleName+"'",function(err,result){
+    pool.query("SELECT * FROM articles where title = '"+req.params.articleName+"'",function(err,result){
         
         if(err)
         {
