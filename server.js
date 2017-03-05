@@ -122,7 +122,7 @@ app.get('/articles/:articleName',function(req,res){
 function hash(input,salt)
 {
     const crypto = require('crypto');
-    var hashedValue = crypto.pbkdf2Sync(input, salt, 100000, 512, 'sha512');
+    var hashedValue = crypto.pbkdf2Sync(input, salt, 1000, 512, 'sha512');
     return hashedValue.toString('hex');
 }
 
