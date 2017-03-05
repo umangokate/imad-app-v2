@@ -119,7 +119,21 @@ app.get('/articles/:articleName',function(req,res){
  
 });
 
+function hash(input,salt)
+{
+    const crypto = require('crypto');
+    var hashedValue = crypto.pbkdf2Sync(input, salt, 100000, 512, 'sha512');
+    return hashedValue.toString('hex');
+}
 
+app.get('/input/:inputName',function(req,res){
+   
+   var input = req.params.inputName;
+   var hashedValue = hash(input,'umang');
+   res.send(hashedValue);
+   
+    
+});
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
